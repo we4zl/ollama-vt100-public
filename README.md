@@ -2,7 +2,7 @@
 
 A terminal-based chat client for Ollama, meticulously optimized for 80x24 VT-100 and CRT displays. This is a niche tool for the retro-computing enthusiast who wants to chat with modern AI on vintage hardware.
 
-
+`![DEC VT100 Terminal](https://upload.wikimedia.org/wikipedia/commons/d/d1/DEC_VT100_terminal.jpg)`
 
 ## What It Is
 
@@ -36,7 +36,7 @@ This program is a pure, text-only Go application that connects to an Ollama serv
 
 ## Configuration
 
-Before you can run the client, you must create a `config.json` file.
+Before you can run the client, you must configure it.
 
 ### 1. config.json (Required)
 
@@ -48,3 +48,31 @@ Create a file named `config.json` with the following content:
 {
   "ollama_url": "[http://127.0.0.1:11434](http://127.0.0.1:11434)"
 }
+
+### 2. Agents (Optional)
+
+"Agents" are simply **plain text files** that provide the **system prompt** for your chat session. This sets the personality and instructions for the AI.
+
+* **Location:** All agent files must be placed in the `agents/` directory.
+* **File Extension:** Files **must** use the `.agent` extension (e.g., `researcher.agent`).
+
+The program will read all `.agent` files in this directory and present them as a list for you to choose from at startup.
+
+#### Example: `agents/researcher.agent`
+
+To create an agent, just create a new plain text file in the `agents/` directory. For example:
+
+```bash
+# Create the file
+touch agents/researcher.agent
+
+# Add your plain text system prompt to the file
+echo "You are a research agent. Be precise in all of your work, and explain your thought process as you talk." > agents/researcher.agent
+
+
+## Building from Source
+
+To build your own binary from the source code, run:
+
+```bash
+go build -o ollama-vt100 .
