@@ -2,7 +2,6 @@
 
 A terminal-based chat client for Ollama, meticulously optimized for 80x24 VT-100 and CRT displays. This is a niche tool for the retro-computing enthusiast who wants to chat with modern AI on vintage hardware.
 
-`![DEC VT100 Terminal](https://upload.wikimedia.org/wikipedia/commons/d/d1/DEC_VT100_terminal.jpg)`
 
 ## What It Is
 
@@ -33,22 +32,7 @@ This program is a pure, text-only Go application that connects to an Ollama serv
 4.  **Chat:**
     * Type your message at the `>` prompt and press Enter.
     * Type `/quit` or `/exit` to end the session.
-
-## Configuration
-
-Before you can run the client, you must configure it.
-
-### 1. config.json (Required)
-
-This file tells the client where to find your Ollama server. It must be in the same directory as the executable.
-
-Create a file named `config.json` with the following content:
-
-```json
-{
-  "ollama_url": "[http://127.0.0.1:11434](http://127.0.0.1:11434)"
-}
-
+  
 ### 2. Agents (Optional)
 
 "Agents" are simply **plain text files** that provide the **system prompt** for your chat session. This sets the personality and instructions for the AI.
@@ -76,3 +60,20 @@ To build your own binary from the source code, run:
 
 ```bash
 go build -o ollama-vt100 .
+
+
+## Configuration
+
+Before you can run the client, you must configure it.
+
+### 1. config.json (Required)
+
+This file tells the client where to find your Ollama server. It must be in the same directory as the executable.
+
+Create a file named `config.json` with the following content:
+
+```json
+{
+  "ollama_url": "[http://127.0.0.1:11434](http://127.0.0.1:11434)"
+}
+
