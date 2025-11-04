@@ -2,7 +2,7 @@
 
 A terminal-based chat client for Ollama, meticulously optimized for 80x24 VT-100 and CRT displays. This is a niche tool for the retro-computing enthusiast who wants to chat with modern AI on vintage hardware.
 
-
+![DEC VT100 Terminal](https://github.com/bprendie/ollama-vt100/blob/main/vt100.jpg)
 ## What It Is
 
 This program is a pure, text-only Go application that connects to an Ollama server. Its primary features are:
